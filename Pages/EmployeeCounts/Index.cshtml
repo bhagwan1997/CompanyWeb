@@ -1,0 +1,24 @@
+@page
+@model CompanyWeb.Pages.EmployeeCounts.IndexModel
+
+<h1>Employee Count By Department</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Department ID</th>
+            <th>Department</th>
+            <th>Employee Count</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var r in Model.Rows)
+{
+        <tr>
+            <td>@r.DepartmentId</td>
+            <td>@r.DepartmentName</td>
+            <td>@r.EmployeeCount</td>
+        </tr>
+}
+    </tbody>
+</table>
